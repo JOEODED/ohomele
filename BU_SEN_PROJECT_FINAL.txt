@@ -1,0 +1,238 @@
+Ohomele Oselumese Joseph
+24/1508
+BU SEN PROJECT 
+QUESTION ANSWERED 
+1 AND 4
+
+
+
+                                                             1
+INDEX.HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLE PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="nav-bar3">
+      <a>SERVICES</a>
+      <a>EXPIRIENCE</a>
+      <a>EDUCATION</a>
+    </ul>
+<div class="body">
+    <div class="first" >
+        <h1>MY NAME IS CATRINA MASONNILE</h1> </div>
+        <div>  <img src="cat.jpg" alt="profile picture" class="round-image" >
+        </div>
+  <div class="second">
+        <p>Yes i am a cat.</p>
+        <p>And i know you are asking "you are a cat why should i hire you??".</p>
+        <p>Well as you can see up there i have all the major qualities needed to help you.</p>
+        <p>Which include services,expirience and education which are all the qualities needed.</p>
+        <p>click the contact button below to reach me now.</p>
+    </div>  
+    <div class="therefore">
+    <a href="contact.html"><button class="btn">CONTACT ME</button></a> 
+    </div>
+</div>
+
+
+STYLE.CSS
+body{
+    background-color: brown;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-size: contain;
+}
+.nav-bar3{
+    color: red;
+    align-content:  center;
+    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    word-spacing: 10px;
+    background-color:white;
+    background-size:cover;
+    background-position: 30px;
+    text-size-adjust: 30px;
+    font-size:50px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+    
+
+
+.round-image{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: right;
+    margin-left: 20px;
+    justify-content: right;
+}
+.first{
+    align-items:center;
+    display: flex;
+    gap: 20px;
+    text-justify:inter-ideograph;
+    font-size: 30px;
+}
+.second{
+    font-size: 30px;
+}
+.btn{
+    background-color: palevioletred;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+     
+
+    
+    
+</body>
+</html>
+
+
+
+
+
+                                                                                     4
+INDEX.HTML
+!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Simple Quiz App</title>
+ <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <div class="quiz-container" id="quiz">
+ <h2 id="question">Question text</h2>
+ <ul>
+ <li><button class="answer-btn" onclick="selectAnswer(0)"></button></li>
+ <li><button class="answer-btn" onclick="selectAnswer(1)"></button></li>
+ <li><button class="answer-btn" onclick="selectAnswer(2)"></button></li>
+ <li><button class="answer-btn" onclick="selectAnswer(3)"></button></li>
+ </ul>
+ <button id="next-btn" onclick="nextQuestion()">Next</button>
+ </div>
+ <script src="script.js"></script>
+</body>
+
+
+
+STYLE.CSS
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   }
+   .quiz-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+   }
+   ul {
+    list-style-type: none;
+    padding: 0;
+   }
+   .answer-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   }
+   .answer-btn:hover {
+    background-color: white;
+   }
+   #next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+   }
+
+SCRIPT.JS
+onst quizData = [
+ {
+    question: "What is the capital of France?",
+    answers: ["Berlin", "Madrid", "Paris", "Lisbon"],
+    correct: 2
+    },
+    {
+    question: "What is 2 + 2?",
+    answers: ["3", "4", "5", "33"],
+    Correct: 1
+    },
+    {
+    question: "What is the largest planet?",
+    Answers: ["Earth", "Mars", "Jupiter", "Saturn"],
+    Correct: 2
+    }
+   ];
+   let currentquestion = 0;
+   let score = 0;
+   function loadQuestion() {
+    const questionEl = document.getElementById("question");
+    const answerButtons = document.querySelectorAll(".answer-btn");
+    const currentData = quizData[currentquestion];
+    questionEl.textContent = currentData.question;
+    answerButtons.forEach((btn, index) => {
+    btn.onclick = () => selectAnswer[index];
+    btn.textContent = currentData.answers[index];
+    btn.disabled = false;
+    btn.style.backgroundColor = "#eee";
+    });
+   }
+   function selectAnswer(index) {
+    const iscorrect = index === quizData[currentquestion].correct;
+    const buttons = document.querySelectorall(".answer-btn");
+    buttons.foreach((btn, i) => {
+    btn.disabled = true;
+    btn.style.backgroundColor = i === quizData[currentQuestion].correct ? "#c8e6c9" :
+   "#ffcdd2";
+    });
+    if (isCorrect) score++;
+   }
+   function nextquestion() {
+    const nextButton =
+    document.getElementById("next-btn");
+    nextButton.onclick = () => {
+    currentquestion++;
+    if (currentquestion < quizData.length) {
+    loadQuestion();
+    } else {
+        Document.getElementById("quiz").innerHTML = `
+        <h2>You scored ${score} out of ${quizData.length}</h2>
+        <button onclick="location.reload()">Try Again</button>
+        `;
+        }
+        
+       }
+    }
+       Window.onload = loadQuestion;
+
+
+
